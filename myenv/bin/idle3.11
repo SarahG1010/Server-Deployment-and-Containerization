@@ -1,5 +1,0 @@
-#!/Users/ziyuguo/Documents/AAA_job_finding/2_SDE/3_SDE_Projects/Server-Deployment-and-Containerization/myenv/bin/python3.11
-
-from idlelib.pyshell import main
-if __name__ == '__main__':
-    main()
