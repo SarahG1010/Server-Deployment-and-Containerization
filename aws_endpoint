@@ -1,0 +1,6 @@
+eksctl create cluster --name simple-jwt-api --nodes=2 --version=1.29 --instance-types=t2.medium --region=us-east-2
+
+aa2c54d50cc52406abfe1d55691f0a67-627889111.us-east-2.elb.amazonaws.com
+
+export TOKEN=`curl -d '{"email":"123@udacity.com","password":"1234"}' -H "Content-Type: application/json" -X POST aa2c54d50cc52406abfe1d55691f0a67-627889111.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
+curl --request GET 'aa2c54d50cc52406abfe1d55691f0a67-627889111.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
